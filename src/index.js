@@ -46,8 +46,6 @@ function makeLi(quote){
         }
         else if(evt.target.className === "btn-success"){
             const otherId = parseInt(id)
-            console.log(otherId)
-            debugger
             const like = parseInt(evt.target.firstElementChild.innerText)
             let newLikeAmt = like + 1
             
