@@ -45,12 +45,10 @@ function makeLi(quote){
             .then(res => res.json())
         }
         else if(evt.target.className === "btn-success"){
-            const otherId = parseInt(id)
-            console.log(otherId)
-            debugger
+            
             const like = parseInt(evt.target.firstElementChild.innerText)
             let newLikeAmt = like + 1
-            
+            debugger
             fetch(`http://localhost:3000/likes`, {
                 method: "POST",
                 headers: {
@@ -58,7 +56,7 @@ function makeLi(quote){
                     "Accept": "application/json"
                 },
                 body: JSON.stringify({
-                    quoteId: otherId
+                    quoteID: id
                 })
             })
             .then(res => res.json())
